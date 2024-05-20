@@ -33,11 +33,11 @@ The purpose of this demo is to delve into the inner workings of the Audio/Media 
 
 ### Step 4: Implement Audio Playback
 - **Media Playback**: Utilize `MediaPlayer` to handle audio streams. Load sample audio files to test playback functionality.
-- **Audio Focus Management (advanced)**: Implement audio focus to ensure your app coexists with other audio sources, such as navigation prompts and system alerts.
+- **Audio Focus Management (optional)**: Implement audio focus to ensure your app coexists with other audio sources, such as navigation prompts and system alerts.
 
 ### Step 5: Integrate with Vehicle Audio System
-- **Use Vehicle HAL (advanced)**: Access the Vehicle HAL APIs to understand how to send and receive audio-related commands to the vehicle’s hardware.
-- **Handle Alerts and Chimes (advanced)**: Learn how to trigger and manage vehicle-specific sounds using the appropriate APIs.
+- **Use Vehicle HAL (optional)**: Access the Vehicle HAL APIs to understand how to send and receive audio-related commands to the vehicle’s hardware.
+- **Handle Alerts and Chimes (optional)**: Learn how to trigger and manage vehicle-specific sounds using the appropriate APIs.
 
 ### Step 6: Test and Debug
 - **Run the Application**: Test the app on the Android Automotive emulator, focusing on how it interacts with simulated vehicle audio systems.
