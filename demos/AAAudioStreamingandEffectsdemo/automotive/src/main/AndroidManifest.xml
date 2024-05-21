@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Specifies the XML version and the encoding used in this file -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Root element of the AndroidManifest.xml, declares the namespace used for Android XML attributes -->
+
+    <uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="true" />
+    <!-- Declares that the app requires automotive hardware features, making it specific to Android Automotive devices -->
+
+    <!--modify if needed based on your audio source-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Requests permission to access the Internet, necessary for streaming audio or accessing online content -->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Requests permission to read from external storage, necessary for accessing audio files stored on the device -->
+
+    <application
+        android:allowBackup="true"
+        android:appCategory="audio"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AAAudioStreamingandEffectsdemo" >
+        <!-- Defines the application block with various attributes:
+             allowBackup: allows the app's data to be backed up and restored
+             appCategory: categorizes the app as an audio app
+             icon: sets the app icon from the resources
+             label: specifies the app name displayed to the user, taken from string resources
+             roundIcon: specifies the round icon used on devices that support it
+             supportsRtl: enables right-to-left layouts if needed
+             theme: sets the overall theme of the app from defined styles -->
+
+        <activity
+            android:name="com.example.aa_audio_streaming_and_effects_demo.MainActivity"
+            android:exported="true">
+            <!-- Defines an activity, which is a single screen in the app:
+                 name: specifies the fully qualified name of the activity class
+                 exported: marks the activity as accessible to other apps, necessary for apps that need to be launched by the system or other applications -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- Defines the intent filter for the activity:
+                     action.MAIN: specifies that this is the main entry point of the app
+                     category.LAUNCHER: specifies that this activity should be listed in the system's app launcher -->
+
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
