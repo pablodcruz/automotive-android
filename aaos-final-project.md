@@ -53,8 +53,6 @@ This project outline sets a structured framework for you all to develop Android 
  
 ## Evaluation Criteria
 - **Functionality**: How well does the app perform the tasks it is supposed to?
-- **User Interface and Experience**: Is the app easy to use in a vehicle setting? Does it enhance the driving experience without causing distractions?
-- **Creativity and Innovation**: How creative are the features and solutions implemented in the app?
-- **Adherence to Safety Standards**: How well does the app meet automotive safety and distraction guidelines?
-- **Technical Quality**: Quality of the code, architectural design, and overall project organization.
- 
+- **Value**: How effective are the features and solutions implemented in the app in providing value to a team?
+- **Adherence to Safety Standards**: How well does the app meet automotive safety and distraction guidelines? Does it need to take this into account?
+- **Technical Quality**: Quality of the code, architectural design, documentation, and overall project organization.
