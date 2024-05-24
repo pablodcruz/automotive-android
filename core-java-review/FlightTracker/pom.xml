@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- project metadata-->
     <groupId>org.revature</groupId>
-    <artifactId>PEPLabsChallenges</artifactId>
+    <artifactId>FlightTracker</artifactId>
     <version>0.1</version>
 
     <!-- maven allows us to change the version of java we'd like to use -->
