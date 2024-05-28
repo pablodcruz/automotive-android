@@ -12,19 +12,13 @@ This demo demonstrates how to build an IoT app for Android Automotive to control
 
 ## Objectives
 
-- Understand how to declare IoT category support in the Android Automotive manifest.
-- Implement a basic Android Automotive app to control a garage door opener.
-- Send HTTP requests from the app to a backend server to open and close the garage door.
+- Implement a basic Android Automotive IoT app to control a garage door opener.
+- Learn how to send HTTP requests from the app to a backend server (we will assume we have one) to open and close the garage door.
 - Understand how V2X communication can be implemented using the internet and discuss more advanced V2X technologies.
 
 ## Setup and Testing
 
-### Step 1: Set Up the Development Environment
-
-- Ensure Android Studio is up-to-date and configured with the latest Android Automotive OS emulator.
-- Familiarize yourself with the Android Automotive Emulator's extended controls.
-
-### Step 2: Declare IoT Category in Your Manifest
+### Step 1: Declare IoT Category in Your Manifest
 
 Add the `androidx.car.app.category.IOT` category in your `AndroidManifest.xml`:
 
@@ -80,7 +74,7 @@ Add the `androidx.car.app.category.IOT` category in your `AndroidManifest.xml`:
 </manifest>
 ```
 
-### Step 3: Implement the Car App Service
+### Step 2: Implement the Car App Service
 
 Create a service that extends `CarAppService` to handle the logic for the car app.
 
@@ -133,7 +127,7 @@ public class GarageDoorSession extends Session {
 }
 ```
 
-### Step 4: Design the User Interface
+### Step 3: Design the User Interface
 
 Use the GridTemplate to display the garage door opener and allow user interaction.
 
@@ -259,29 +253,25 @@ public class NetworkUtils {
 - **DSRC (Dedicated Short Range Communications)**: A wireless communication standard specifically designed for automotive use, enabling low-latency, high-reliability communication.
 - **C-V2X (Cellular Vehicle-to-Everything)**: A communication technology based on cellular networks (4G/5G) that supports direct communication between vehicles and other V2X entities.
 
-### V2X in Android Automotive
+### Integrating V2X in Android Automotive
 
-Android Automotive is an open-source operating system and platform designed for use in vehicles, allowing developers to create applications that interact with vehicle hardware and external services. Integrating V2X capabilities into Android Automotive can involve the following components:
+Integrating V2X capabilities into Android Automotive can involve the following components:
 
 - **V2X Communication Stack**: Integration of a V2X communication stack, either DSRC or C-V2X, into the vehicle’s hardware and software architecture.
 - **Vehicle Hardware Abstraction Layer (VHAL)**: Extending the VHAL to support V2X properties and services, enabling the Android Automotive OS to interact with the V2X communication stack.
 - **Application Layer**: Developing Android Automotive applications that leverage V2X data to provide safety alerts, traffic updates, and enhanced navigation features.
 
-### Simplified V2X Communication Using HTTP Requests
+### Justification for V2X Communication Using HTTP Requests
 
 In this tutorial, we are implementing a type of V2X communication using the internet connectivity of the In-Vehicle Infotainment (IVI) system. This approach leverages the existing cellular or Wi-Fi connectivity of the IVI system to send and receive messages to other devices connected to the internet, effectively simulating V2X communication. This method is simpler to implement compared to DSRC and C-V2X, which require specialized hardware and complex integration.
 
 ## Discussion Points
 
 - **Challenges**: Discuss the challenges of managing real-time data in a vehicle environment.
-- **Enhancements**: Explore potential enhancements, such as integrating predictive maintenance alerts.
+- **Enhancements**: Explore potential enhancements, such as integrating other IoT devices into the same app.
 - **Future Steps**: Discuss how to implement advanced V2X features using dedicated communication protocols like DSRC and C-V2X.
 
 ## References
 
 - [Android Automotive Documentation](https://developer.android.com/cars)
-- [MyQ API Documentation](https://developer.myq.com/)
-- [Nexx API Documentation](https://docs.nexx.cloud/)
-- [Gogogate API Documentation](http://www.gogogate.com/pdf/gogogate2-api.pdf)
-- [Garadget API Documentation](https://docs.garadget.com/start/api/)
-- [Android Studio Automotive Emulator - Extended Controls](https://developer.android.com/studio/run/emulator-extended-controls)
+- [MyQ API Discussion](https://www.reddit.com/r/homeautomation/comments/17ex3rf/how_do_we_lobby_myq_to_provide_a_decent_api/)
